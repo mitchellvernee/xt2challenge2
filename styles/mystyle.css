@@ -1,0 +1,74 @@
+#main{
+ display: flex;
+ flex-direction: column;
+
+}
+
+#myClock {
+    color: #17D4FE;
+    font-size: 50px;
+    font-family: "Audiowide", sans-serif;
+    letter-spacing: 7px;
+    text-align: center;
+}
+ 
+img{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100px;
+} 
+
+#raket1 {
+  animation: wobble 3s ease infinite;
+}
+@keyframes wobble {
+  0% { transform: translateX(0%); }
+  15% { transform: translateX(-45%) rotate(-5deg); }
+  30% { transform: translateX(30%) rotate(3deg); }
+  55% { transform: translateX(-25%) rotate(-3deg); }
+  60% { transform: translateX(20%) rotate(2deg); }
+  75% { transform: translateX(-10%) rotate(-1deg); }
+  100% { transform: translateX(0%); }
+}
+
+#raket2{
+  animation: stuiter 4s ease infinite;
+}
+@keyframes stuiter {
+    70% { transform:translateY(0%); }
+    80% { transform:translateY(-25%); }
+    90% { transform:translateY(0%); }
+    95% { transform:translateY(-7%); }
+    99% { transform:translateY(-10%); }
+    100% { transform:translateY(0); }
+}
+
+
+@media only screen and (min-width: 750px) {
+	#main{
+	 display: flex;
+	 flex-direction: row;
+
+	}
+
+
+	#myClock{
+		font-size: 100px;
+	}
+	img{
+		width: 75px;
+	}
+}
+
+@media only screen and (min-width: 950px) {
+	#main{
+		display: flex;
+	}
+	#myClock{
+		font-size: 150px;
+	}
+	img{
+		width: 200px;
+	}
+}
